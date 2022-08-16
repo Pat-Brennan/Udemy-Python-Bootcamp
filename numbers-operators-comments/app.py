@@ -40,3 +40,11 @@ print(1 / 2) # 0.5
 # division
 # addition
 # subtration
+
+# * Comments!
+# ? The hashtag, or otherwise known as the OCTOTHORP will comment out python code
+# ? The symbols following them will change the color using the extension better comments!
+
+1/2 * 2 # + 1
+
+# ANSWER : 1.0 (because the + 1 is ignored)
