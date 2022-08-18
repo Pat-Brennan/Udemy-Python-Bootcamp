@@ -12,14 +12,14 @@ python_is_awesome = 5
 another_variable = python_is_awesome
 python_is_awesome = 1000
 
-print(another_variable) # prints 5
+print(another_variable)  # prints 5
 
 # * Multiple Variable Assignment
-# ? In python, you can assign multiple variables at once! 
+# ? In python, you can assign multiple variables at once!
 
-all, at, once = 5, 10, 15 
+all, at, once = 5, 10, 15
 
-print(all, at) # prints 5 10
+print(all, at)  # prints 5 10
 
 # * Variable Naming Restrictions
 # ? Variables must start with a LETTER or UNDERSCORE
@@ -32,7 +32,7 @@ print(all, at) # prints 5 10
 # ? ✅ cats_are_cute ❌ catsAreCute
 
 # ? Constants are written in SCREAMING SNAKE CASE
-# ? SCREAMING_SNAKE_CASE 
+# ? SCREAMING_SNAKE_CASE
 
 # ? Classes are written in UPPER CAMEL CASE (Title case?)
 # ? UpperCamelCase
