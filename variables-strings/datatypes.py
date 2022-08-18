@@ -92,3 +92,25 @@ print(put_together)
 dino = "Tyranosaurus "
 dino += "Rex"
 print(dino)
+
+# * F-Strings
+# ? This was introduced with Python 3.6
+# ? Basically the same as Template Literals in JavaScript
+
+counter = 6
+apples = f"Number of Apples: {counter}"
+print(apples)
+
+# * The old way .format()
+
+cat = "Eorah"
+cat_dino = "leave that {} alone {}!".format(dino, cat)
+print(cat_dino)
+
+# * String indicies
+# ? They always start from 0
+# ? Positive numbers will access the FIRST INDEX
+# ? Negative numbers will access the LAST INDEX
+
+print(cat[0]) # prints E
+print(cat[-1]) # prints h
