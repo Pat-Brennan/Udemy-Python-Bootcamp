@@ -19,7 +19,7 @@ i_am_string = "I'm mr.meeseeks look at me!!!"  # string
 i_am_list = [0, "Hey you!", "stop that!", 4, 5, True]  # list
 
 i_am_dictionary = {"Animal": "Froggo", "Food": "Flies",
-                    "Hometown": "Pondville"}  # dictionary
+                   "Hometown": "Pondville"}  # dictionary
 
 # * Dynamic Typing
 # ? The ability to reassign variables to different types readily
@@ -41,3 +41,24 @@ print(awesomeness)
 
 # int not_awesomeness = 5
 # not_awesomeness = "Great!"  this would throw an error
+
+# * None
+# ? This is Pythons version of NULL
+
+person = {
+    'Name': 'Roger',
+    'Age': 'Over a thousand',
+    'Children': None,
+    'Is_alive': True
+}
+print(person)
+
+# * Declaring Strings
+# ? Using single or double quotes is perfectly fine!(but be consistant)
+
+name = "Bingo"
+other_name = 'Bango'
+
+# ? Using quotes inside of quotes is fine, but must be one or the other!
+
+quote_example = "I said 'Hey! What a wonderful kind of day'"
