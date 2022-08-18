@@ -62,3 +62,33 @@ other_name = 'Bango'
 # ? Using quotes inside of quotes is fine, but must be one or the other!
 
 quote_example = "I said 'Hey! What a wonderful kind of day'"
+
+# * String Escape Characters
+# ? In Python, there are also 'escape characters', which are 'metacharacters'
+# ? They get interpretted by python to do something special...
+# ? and the all start with \
+
+# ? \n : Makes a new line for string information to be placed
+
+new_line = 'Hi \n There \n Bongo!'
+print(new_line)
+
+# ? \\ : used if you don't want to mix and match single versus double quotes
+
+string = "He done told me \"Takeyourwaterballoonselsewhere!\""
+print(string)
+
+# * String Concatentation
+# ? Combining multiple strings together.
+# ? In Python, you can do this simply with a + operator
+
+first_part = "WOah Nelly!"
+second_part = "Hold your horse!"
+put_together = first_part + ' ' + second_part
+print(put_together)
+
+# ? you can also use the += operator!
+
+dino = "Tyranosaurus "
+dino += "Rex"
+print(dino)
