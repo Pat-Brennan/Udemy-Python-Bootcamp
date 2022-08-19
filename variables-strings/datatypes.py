@@ -112,5 +112,22 @@ print(cat_dino)
 # ? Positive numbers will access the FIRST INDEX
 # ? Negative numbers will access the LAST INDEX
 
-print(cat[0]) # prints E
-print(cat[-1]) # prints h
+print(cat[0])  # prints E
+print(cat[-1])  # prints h
+
+# * Converting Data Types!
+# ? In string interpolation, data types are implicitly converted into string form
+# ? You can also explicitly convert variables by using the name of the
+# ? built in type as a function!
+
+decimal = 6.66
+integer = int(decimal)  # This will convert our FLOAT to an INT
+print(integer)  # Prints 6
+print(type(integer))
+
+my_list = [1, 2, 3]
+my_string = str(my_list)  # This will convert our LIST to a STRING
+print(my_string)
+print(type(my_string))
+
+# ! AVOID NAMING VARIABLES THINGS THAT ARE BUILT IN FUNCTIONS (int, str, float, etc.)
