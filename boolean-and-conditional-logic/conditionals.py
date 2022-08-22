@@ -96,3 +96,22 @@ if city == 'Los Angelos' or city == 'San Francisco':
     print('You live in California!')
 else:
     print('You can\'t hide from me!!!')
+
+# * is vs. ==
+# ? In python, == and 'is' are very similar, not the same.
+# ? == will check if the VALUES are the same
+# ? IS will check if they have the same VALUES are STORED in the same place
+
+a = 1
+a == 1 # True
+a is 1 # True
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+a == b # True : They have the same VALUES
+a is b # False : They have the same VALUES but are not STORED in the same place
+
+c = b # We make a new variable called 'c', and have it point to the same memory space as b
+b is c # True
+
+# ? 'is' is only truthy if the variables reference the same item in memory
