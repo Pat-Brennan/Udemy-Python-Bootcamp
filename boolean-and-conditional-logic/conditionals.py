@@ -59,3 +59,40 @@ if animal:  # if the string is empty i.e no input. It will evaluate to falsy
     print(f'{animal} is your favorite animal!')
 else:
     print('YOU SAID NOTHING OF ANIMALS!')  # and print this instead.
+
+
+# * Logical Operators!
+# ? In Python, the following operators can be used to make boolean logic
+# ? comparisons or statements...and, or, and not
+
+# ? and - if a and b:
+# ? or - if a or b:
+# ? not - if not a:
+
+# * AND Example
+print('How old are you?')
+age = int(input())
+
+if age < 2:
+    print('You\'re a baby!')
+elif age >= 2 and age <= 8:
+    print('You\'re a child!')
+elif age >= 9 and age <= 18:
+    print('you\'re a teen!')
+else:
+    print('congrats you are adult!')
+
+# * NOT Example
+# if not age >= 2 and <= 8 or age > 65:
+#   print('You pay the adult price!')
+# else:
+#   print('you are a child or senior!') 
+
+# * OR Example
+print('Where do you live?')
+city = input()
+
+if city == 'Los Angelos' or city == 'San Francisco':
+    print('You live in California!')
+else:
+    print('You can\'t hide from me!!!')
