@@ -55,7 +55,7 @@ x is 0  # false
 print('What is your favorite animal?')
 animal = input()
 
-if animal: # if the string is empty i.e no input. It will evaluate to falsy
+if animal:  # if the string is empty i.e no input. It will evaluate to falsy
     print(f'{animal} is your favorite animal!')
 else:
-    print('YOU SAID NOTHING OF ANIMALS!') # and print this instead.
+    print('YOU SAID NOTHING OF ANIMALS!')  # and print this instead.
