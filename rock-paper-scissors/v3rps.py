@@ -23,7 +23,7 @@ if player == comp:
     print("DRAWWW!")
 elif player == "rock":
     if comp == "paper":
-        print("Comp Wins!")
+        print("Computer Wins!")
     elif comp == "scissors":
         print("Player Wins!")
 elif player == "paper":
