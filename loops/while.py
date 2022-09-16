@@ -44,3 +44,29 @@ print("Welcome to the Fishy Friends!") # All other outcomes result in Fishy Frie
 #   print(num)
 
 # ? range() replaces the need to increment by 1
+
+# * BREAK Keyword
+
+# ? The keyword break gives us the ability to exit out of WHILE LOOPS whenever we want
+
+while True:
+    command = input("Type 'exit' to exit: ")
+    if command == "exit": # When exit is typed
+        break # the while loop will stop
+
+# ? We can also use it to end FOR LOOPS early
+
+for x in range(1, 111):
+    print(x)
+    if x == 3: # when the range hits 3
+        break # the while loop will stop
+    
+# * Adding a break
+
+times = int(input('How many times do I have to tell you?!'))
+
+for time in range(times):
+    print('CLEAN YOUR ROOM!')
+    if times >= 4:
+        print('Do you even listen anymore??')
+        break
