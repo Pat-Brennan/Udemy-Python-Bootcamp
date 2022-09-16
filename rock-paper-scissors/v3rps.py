@@ -1,7 +1,12 @@
 import random
 
 # * Rock, Paper, Scissors!
-for time in range(3):
+
+player_wins = 0
+computer_wins = 0
+
+while player_wins < 2 and computer_wins < 2:
+    print(f'Player Score: {player_wins} Computer Score: {computer_wins}')
     print('... Rock ...')
     print('... Paper ...')
     print('... Scissors ...')
@@ -24,17 +29,23 @@ for time in range(3):
     elif player == "rock":
         if comp == "paper":
             print("Computer Wins!")
+            computer_wins += 1
         elif comp == "scissors":
             print("Player Wins!")
+            player_wins += 1
     elif player == "paper":
         if comp == "scissors":
             print("Computer Wins!")
+            computer_wins += 1
         elif comp == "rock":
             print("Player Wins!")
+            player_wins += 1
     elif player == "scissors":
         if comp == "rock":
             print("Computer Wins!")
+            computer_wins += 1
         elif comp == "paper":
             print("Player Wins!")
+            player_wins += 1
     else:
         print("Something seems to be amiss...")
