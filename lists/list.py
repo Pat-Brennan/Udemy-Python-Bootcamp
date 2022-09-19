@@ -24,6 +24,37 @@ list(r) # this will turn 'r' into a LIST, just like str() turns things into stri
 
 # ? Like ranges, lists ALWAYS start counting at zero. So the first ELEMENT is index 0
 
-colors = ['red', 'blue', 'yellow']
+colors = ['red', 'blue', 'yellow', 8 , True, 6.66]
 best_color = colors[0] # accesses index 0 and saves to variable best_color
 print(best_color) # prints red
+
+# ? Negative indexing grabs the end of the list instead of the beginning
+print(colors[-1]) # prints yellow
+
+# ? Check if a value is IN a list
+# ! HAS TO MATCH EXACTLY(Capitalization matters)
+
+print('red' in colors) # prints True
+print('purple' in colors) # prints False
+
+if 'blue' in colors:
+  print('You have great taste!')
+  
+# * Using Loops with Lists
+
+# ? For Loop
+
+for color in colors: # Grabs each index in the list 'colors'
+  print(color) # and prints them! 
+  
+numbers = [1,2,3,4,5,6,6,6,16,16,16]
+
+for num in numbers:
+  print(num * num)
+  
+# ? While Loop
+
+i = 0 # To avoid an infinite loop we must set a counter
+while i < len(colors): # check length of colors list and compare to i
+  print(colors[i])
+  i += 1 # Add to i to eventually stop the loop
