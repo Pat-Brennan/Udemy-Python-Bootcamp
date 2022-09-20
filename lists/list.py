@@ -58,3 +58,19 @@ i = 0 # To avoid an infinite loop we must set a counter
 while i < len(colors): # check length of colors list and compare to i
   print(colors[i])
   i += 1 # Add to i to eventually stop the loop
+  
+# * Methods and functions are not necessarily the same
+
+len(numbers) # len is a built-in function
+
+numbers.append(666) # ? APPEND is a METHOD
+print(numbers)
+
+# ? METHODS are indicated by the .
+# ? and don't necessarily need to be attached to variables
+
+['this', 'is', 'just', 'a'].append('list')
+
+# * List Methods
+
+# ? Append: add an item to the end of the list
