@@ -120,3 +120,32 @@ print(stray_pokemon)
 food = ['salsa', 'chips', 'tacos', 'chips']
 food.remove('chips') # finds the FIRST instance of chips, and removes it!
 print(food)
+
+# ? Index: returns the index of the specified item in the list
+
+cereal = ['capn crunch', 'count chocula', 'fruity pebbles', 'capn crunch']
+print(cereal.index('count chocula')) # prints 1
+print(cereal.index('capn crunch', 1)) # arg1: What to find, arg2: a starting point
+
+# ? Count: return the number of times x appears in the list
+
+beast_number = [6, 6, 6, 4, 2, 0, 16, 16, 16, 13, 7]
+print(beast_number.count(6)) # prints 3
+
+# ? Reverse: Reverse the elements of the list(in-place)
+# ? Edits the ORIGINAL LIST does NOT make a copy
+
+beast_number.reverse()
+print(beast_number)
+
+# ? Sort: sort the items of the list(in-place)
+beast_number.sort()
+print(beast_number)
+
+# ? Join: technically a STRING METHOD that takes an iterable argument 
+# ? Concatenates a copy of the base string  between each item of the iterable
+# ? returns a new string
+# ? Can be used to make sentences out of a list of words by joining on a space
+
+words = ['Welllll', 'hello', 'there!']
+print(' '.join(words))
