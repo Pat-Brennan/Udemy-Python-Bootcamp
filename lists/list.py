@@ -11,6 +11,9 @@
 # item2 = 'Potatoes'
 # This will get clunky FAST! If only there was a way...
 
+from itertools import count
+
+
 demo_list = [1, "potato", True]
 
 len(demo_list) # this will find the LENGTH of the list
@@ -74,3 +77,20 @@ print(numbers)
 # * List Methods
 
 # ? Append: add an item to the end of the list
+# ! Append can only take ONE argument!
+
+count_down = [3, 2, 1]
+count_down.append('GO!')
+print(count_down) # prints 3, 2, 1, GO
+
+# ? Extend: add the the end of a list all values passed to extend
+# ? Even though we're passing count_down a LIST, each item will be added INDIVIDUALLY!
+
+count_down.extend(['Your', 'life', 'depends', 'on', 'it!!!'])
+print(count_down)
+
+# ? Insert: Insert an item at a given position
+# ? .insert(arg1: WHERE to insert, arg2: WHAT to insert)
+
+count_down.insert(2, 'Where was I again? Oh right...')
+print(count_down)
