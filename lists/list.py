@@ -149,3 +149,39 @@ print(beast_number)
 
 words = ['Welllll', 'hello', 'there!']
 print(' '.join(words))
+
+# ? Slice: Slice into an old list, and make a new list from what you sliced!
+# ? Syntax: some_list[start:end:step] The colons are important!
+# ? arg1: where to start, arg2: where to end, arg3: what interval to move by
+# ? The end point is NOT INCLUSIVE (similar to range)
+
+print(beast_number[3:6:1]) # prints [6, 6, 6]
+
+# ? You can also NEGATIVE INDEX this!
+print(cereal[-2:]) # Prints [Fruity pebbles, Capn Crunch]
+
+# * Tricks with Slices!
+
+# ? reversing lists/strings
+
+string = "This is fun!"
+print(string[::-1]) # reverses whole string
+
+# ? Modifying portions of lists
+
+numbers = [1, 2, 3 ,4 , 5]
+numbers[1:3] = ['a', 'b', 'c'] # removes 2, 3, 4, and replaces with a, b, c
+print(numbers)
+
+# ? Chain them together to grab a piece of list, then manipulate it
+
+print(cereal[1][::-1]) # reverses the string at index of 1 in the list 'cereal'
+
+# * How to swap things in a list 
+# ? Uses the comma syntax to separate the items 
+
+card_hand = ['queen', 8, 'jack', 'ace']
+
+card_hand[0], card_hand[3] = card_hand[3], card_hand[0]
+
+print(card_hand)
