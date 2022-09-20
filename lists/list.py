@@ -94,3 +94,29 @@ print(count_down)
 
 count_down.insert(2, 'Where was I again? Oh right...')
 print(count_down)
+
+# ? Clear: Remove all items from the list
+
+animals = ['bear', 'koala', 'pikachu']
+animals.clear()
+print(animals) # prints []
+
+# ? Pop: Remove the item at the given position in the list, and return it.
+# ? If no index is specified, removes and returns the last item in the list.
+
+pokemon = ['Lycanroc', 'eevee', 'charizard']
+pokemon.pop() # removes charizard
+print(pokemon)
+pokemon.pop(1) # removes eevee
+print(pokemon) 
+
+# ! The item that gets popped is not erased!
+stray_pokemon = pokemon.pop()
+print(stray_pokemon)
+
+# ? Remove: Remove the first item from the list whose value is x (whatever x might be)\
+# ? Throws a VALUE ERROR if the item is not found.
+
+food = ['salsa', 'chips', 'tacos', 'chips']
+food.remove('chips') # finds the FIRST instance of chips, and removes it!
+print(food)
