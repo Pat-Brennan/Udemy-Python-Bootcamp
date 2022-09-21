@@ -185,3 +185,8 @@ card_hand = ['queen', 8, 'jack', 'ace']
 card_hand[0], card_hand[3] = card_hand[3], card_hand[0]
 
 print(card_hand)
+
+# * List Comprehension
+# ? Syntax: [ __ for __ in __ ]
+
+print([x*10 for x in numbers])
