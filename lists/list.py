@@ -218,3 +218,19 @@ print([char[0].upper() for char in friends])
 print([bool(val) for val in ['', [], 0]])
 
 print([[str(count) for count in count_down]])
+
+# * List Comprehension with Conditional Logic
+
+more_numbers = [1, 2, 3, 4, 5, 6]
+
+evens = [num for num in more_numbers if num % 2 == 0]
+# add num to the new list IF it has a remainder of 0
+
+odds = [num for num in more_numbers if num % 2 != 0]
+
+multivide = [num*2 if num % 2 == 0 else num/2 for num in more_numbers]
+print(multivide)
+
+with_vowels = 'Look out behind you!!!'
+
+vowel_remover = [char for char in with_vowels if char not in 'aeiou']
