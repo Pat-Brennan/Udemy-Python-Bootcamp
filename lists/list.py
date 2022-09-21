@@ -12,6 +12,7 @@
 # This will get clunky FAST! If only there was a way...
 
 from itertools import count
+from pickle import TRUE
 
 
 demo_list = [1, "potato", True]
@@ -188,5 +189,32 @@ print(card_hand)
 
 # * List Comprehension
 # ? Syntax: [ __ for __ in __ ]
+# ? arg1: What should happen, arg2: what it will happen to, arg3: Where to find the things(in this case a list)
+# [x*10 for x in numbers]
+# multiply by 10 for each entry within the list numbers
 
-print([x*10 for x in numbers])
+# ? Same as above, but with a for loop
+
+doubled_numbers = []
+for num in numbers:
+  doubled_number = num * 2
+  doubled_numbers.append(doubled_number)
+  
+print(doubled_numbers)
+
+# ? List Comprehension allows us to do the above... but in a single line
+
+doubled_numbers2 = [num * 2 for num in numbers] # BAM!
+
+print(doubled_numbers2)
+
+cat = 'Eorah'
+print([char.upper() for char in cat]) 
+# Loops over Cat nad uppercases each letter and creates a new list
+
+friends = ['Jonald', 'Bengy', 'Gerber']
+print([char[0].upper() for char in friends])
+
+print([bool(val) for val in ['', [], 0]])
+
+print([[str(count) for count in count_down]])
