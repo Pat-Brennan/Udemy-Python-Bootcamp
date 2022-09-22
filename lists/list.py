@@ -236,3 +236,9 @@ print(multivide)
 with_vowels = 'Look out behind you!!!'
 
 vowel_remover = [char for char in with_vowels if char not in 'aeiou']
+
+
+# * Nested Lists
+# ? Lists can contain any kind of element, even other lists! 
+
+number_lists = [[1,2,3], [4,5,6], [7,8,9]]
