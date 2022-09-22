@@ -60,9 +60,9 @@ for items in cart:
         print(info)
 
 for attributes in cat.keys():
-  print(attributes)
-  
+    print(attributes)
+
 # * Grabbing both KEY and VALUE in the same loop using .items()
 
-for k,v in cat.items():
-  print(f'The key is {k}, and the value is {v}')
+for k, v in cat.items():
+    print(f'The key is {k}, and the value is {v}')
