@@ -239,31 +239,31 @@ vowel_remover = [char for char in with_vowels if char not in 'aeiou']
 
 
 # * Nested Lists
-# ? Lists can contain any kind of element, even other lists! 
+# ? Lists can contain any kind of element, even other lists!
 
 # ? Why would you do this?
 # ? Complex data structures - matricies
 # ? Game Boards/Mazes
 # ? Rows and Columns for visualizations, tabulation, and grouping data
 
-nested_list = [[1,2,3], [4,5,6], [7,8,9]]
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-print(nested_list[0][1]) # prints 2
-print(nested_list[1][-1]) # prints 6
-print(nested_list[2]) # prints [7, 8, 9]
+print(nested_list[0][1])  # prints 2
+print(nested_list[1][-1])  # prints 6
+print(nested_list[2])  # prints [7, 8, 9]
 
 # ? To iterate through a nested list, we unfortunately need NESTED LOOPS
 
-for i in nested_list: # first loop grabs the first list
-    for value in i: # second loop goes through each item in that list
-        print(value) # and prints them, the goes back to first loop
-        
+for i in nested_list:  # first loop grabs the first list
+    for value in i:  # second loop goes through each item in that list
+        print(value)  # and prints them, the goes back to first loop
+
 coordinates_list = [[10.20, -90.4], [30.66, -34.85], [-666, 420]]
 
 for properties in coordinates_list:
     for location in properties:
         print(location)
-        
+
 # * Nested List Comprehension
 
 [[print(val) for val in i] for i in nested_list]
