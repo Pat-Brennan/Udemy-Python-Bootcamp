@@ -127,3 +127,23 @@ print(new_user)
 # ? Retrieves a key in an object and return None instead of a KeyError if the key does not exist
 
 print(highscores.get('Bozo')) # prints 300
+
+# * pop
+# ? Takes a single argument corresponding to a key and removes that key-value pair
+# ? from the dictionary. Returns the value corresponding to the key that was removed.
+
+print(highscores.pop('Bozo'))
+
+# * popitem
+# ? Removes a RANDOM key in a dictionary
+
+print(highscores.popitem())
+print(highscores)
+
+# * update
+# ? Update keys and values in a dictionary with another set of key-value pairs
+
+first = dict(a=1, b=2, c=3, d=4, e=5)
+second = {}
+second.update(first)
+print(second)
