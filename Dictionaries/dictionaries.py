@@ -4,7 +4,6 @@
 # ? We use the keys to describe our data and the values to represent the data
 
 # ? This is a Dictionary! Much like an OBJECT in JS
-from tokenize import Name
 
 
 instructor = {
@@ -75,3 +74,17 @@ total_donations = 0
 for donation in donations.values():
     total_donations += donation
     print(total_donations)
+
+
+# * Check if a dictionary has a certain KEY
+
+print('name' in cat) # prints FALSE because ... it's case sensitive!
+print('Name' in cat) # This on the other hand ... prints TRUE!
+
+# * Check if a dictionary has a certain VALUE
+
+print('eorah' in cat.values()) # Again, prints FALSE. IT MUST BE EXACT.
+print('Eorah' in cat.values()) # prints True
+
+# ? The 'in' keyword is a lot like opening a book
+# ? "Find the 'Name' of the 'cat' IN the cat dictionary"
