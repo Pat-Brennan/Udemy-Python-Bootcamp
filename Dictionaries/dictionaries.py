@@ -88,3 +88,42 @@ print('Eorah' in cat.values()) # prints True
 
 # ? The 'in' keyword is a lot like opening a book
 # ? "Find the 'Name' of the 'cat' IN the cat dictionary"
+
+# * Dictionary Methods!
+# ? A means to manipulate dictionaries!
+
+# * Clear
+# ? Clear all the keys and values in a dictionary
+
+d = dict(a=1, b=2, c=3)
+d.clear()
+print(d) # prints {} 
+
+# * Copy
+# ? Makes a copy of a dictionary
+
+highscores = dict(Bozo=300, Bongo=666, Brad=420)
+score_stealer = highscores.copy()
+print(score_stealer)
+print(highscores is score_stealer) # FALSE, while they look the same. They are stored in different memory spaces!
+print(highscores == score_stealer) # TRUE, because they contain the same contents
+
+# * fromkeys
+# ? Creates Key-value pairs from comma separated by values
+# ? Odd because it is called on an empty object {}
+
+print({}.fromkeys('a', 'b')) # prints {'a': 'b'}
+
+# ? Purpose? Usually a way to programmatically create default dictionaries
+
+# ! Must be passed an array or list most of the time!
+# ? This will generate a default user
+new_user = {}.fromkeys(['name', 'score', 'email', 'profile bio'], 'unknown')
+print(new_user)
+
+# ? Can be used on an existing dictionary, but it will just generate a new dictionary 🤷
+
+# * get
+# ? Retrieves a key in an object and return None instead of a KeyError if the key does not exist
+
+print(highscores.get('Bozo')) # prints 300
