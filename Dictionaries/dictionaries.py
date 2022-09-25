@@ -67,7 +67,7 @@ for k, v in cat.items():
     print(f'The key is {k}, and the value is {v}')
 
 donations = dict(sam=25.0, lena=88.99, chuck=13.0, linus=99.5,
-                  stan=150.0, lisa=50.25, harrison=10.0)
+                 stan=150.0, lisa=50.25, harrison=10.0)
 print(donations)
 
 total_donations = 0
@@ -78,13 +78,13 @@ for donation in donations.values():
 
 # * Check if a dictionary has a certain KEY
 
-print('name' in cat) # prints FALSE because ... it's case sensitive!
-print('Name' in cat) # This on the other hand ... prints TRUE!
+print('name' in cat)  # prints FALSE because ... it's case sensitive!
+print('Name' in cat)  # This on the other hand ... prints TRUE!
 
 # * Check if a dictionary has a certain VALUE
 
-print('eorah' in cat.values()) # Again, prints FALSE. IT MUST BE EXACT.
-print('Eorah' in cat.values()) # prints True
+print('eorah' in cat.values())  # Again, prints FALSE. IT MUST BE EXACT.
+print('Eorah' in cat.values())  # prints True
 
 # ? The 'in' keyword is a lot like opening a book
 # ? "Find the 'Name' of the 'cat' IN the cat dictionary"
@@ -97,7 +97,7 @@ print('Eorah' in cat.values()) # prints True
 
 d = dict(a=1, b=2, c=3)
 d.clear()
-print(d) # prints {} 
+print(d)  # prints {}
 
 # * Copy
 # ? Makes a copy of a dictionary
@@ -105,14 +105,16 @@ print(d) # prints {}
 highscores = dict(Bozo=300, Bongo=666, Brad=420)
 score_stealer = highscores.copy()
 print(score_stealer)
-print(highscores is score_stealer) # FALSE, while they look the same. They are stored in different memory spaces!
-print(highscores == score_stealer) # TRUE, because they contain the same contents
+# FALSE, while they look the same. They are stored in different memory spaces!
+print(highscores is score_stealer)
+# TRUE, because they contain the same contents
+print(highscores == score_stealer)
 
 # * fromkeys
 # ? Creates Key-value pairs from comma separated by values
 # ? Odd because it is called on an empty object {}
 
-print({}.fromkeys('a', 'b')) # prints {'a': 'b'}
+print({}.fromkeys('a', 'b'))  # prints {'a': 'b'}
 
 # ? Purpose? Usually a way to programmatically create default dictionaries
 
@@ -126,7 +128,7 @@ print(new_user)
 # * get
 # ? Retrieves a key in an object and return None instead of a KeyError if the key does not exist
 
-print(highscores.get('Bozo')) # prints 300
+print(highscores.get('Bozo'))  # prints 300
 
 # * pop
 # ? Takes a single argument corresponding to a key and removes that key-value pair
