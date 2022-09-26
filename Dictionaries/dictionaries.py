@@ -149,3 +149,9 @@ first = dict(a=1, b=2, c=3, d=4, e=5)
 second = {}
 second.update(first)
 print(second)
+
+
+# * Dictionary Comprehension!
+# ? Syntax: { __ : __ for __ in __ }
+# ? Iterates over keys by default
+# ? to iterate over keys and values using .items()
