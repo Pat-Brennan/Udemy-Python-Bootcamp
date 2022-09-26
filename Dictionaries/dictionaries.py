@@ -153,5 +153,30 @@ print(second)
 
 # * Dictionary Comprehension!
 # ? Syntax: { __ : __ for __ in __ }
+# ? { key : value // for value in dictionary }
 # ? Iterates over keys by default
 # ? to iterate over keys and values using .items()
+
+more_numbers = dict(first=1, second=2, third=3)
+
+squared_numbers = {key: value ** 2 for key,value in more_numbers.items()}
+print(squared_numbers)
+
+print({num: num**2 for num in [1, 2, 3, 4, 5]})
+# ? This will print/create a DICTIONARY of key-value pairs 
+# ? Where the KEY is the ORIGINAL number
+# ? and the VALUE is the SQUARED number
+
+str1 = "ABC"
+str2 = "123"
+
+combo = {str1[i]: str2[i] for i in range(0, len(str1))}
+print(combo)
+
+num_list = [1, 2, 3, 4]
+
+
+# * Conditional logic with Dictionary Comprehension!
+
+nums_sorted = { num: ('even' if num % 2 == 0 else 'odd') for num in range(1, 100) }
+print(nums_sorted)
