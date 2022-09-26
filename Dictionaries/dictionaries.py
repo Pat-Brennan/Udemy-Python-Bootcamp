@@ -159,11 +159,11 @@ print(second)
 
 more_numbers = dict(first=1, second=2, third=3)
 
-squared_numbers = {key: value ** 2 for key,value in more_numbers.items()}
+squared_numbers = {key: value ** 2 for key, value in more_numbers.items()}
 print(squared_numbers)
 
 print({num: num**2 for num in [1, 2, 3, 4, 5]})
-# ? This will print/create a DICTIONARY of key-value pairs 
+# ? This will print/create a DICTIONARY of key-value pairs
 # ? Where the KEY is the ORIGINAL number
 # ? and the VALUE is the SQUARED number
 
@@ -178,5 +178,10 @@ num_list = [1, 2, 3, 4]
 
 # * Conditional logic with Dictionary Comprehension!
 
-nums_sorted = { num: ('even' if num % 2 == 0 else 'odd') for num in range(1, 100) }
+nums_sorted = {num: ('even' if num % 2 == 0 else 'odd')
+               for num in range(1, 100)}
 print(nums_sorted)
+
+# chr() grabs an alphabetical character associated with a number 65: A
+answer = {v: chr(v) for v in range(65, 91)}
+print(answer)
