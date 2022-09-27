@@ -39,3 +39,18 @@ cat = {
 }
 
 print(cat.items())
+
+# * Looping over Tuples
+# ? Basically the same as looping over a list!
+
+names = ('Eorah', 'Bongo', 'Reptar')
+
+# ? Prints the list of names
+for name in names:
+    print(name)
+
+# ? Prints the list of names in reverse
+i = len(names) - 1
+while i >= 0:
+    print(names[i])
+    i -= 1
