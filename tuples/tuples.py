@@ -54,3 +54,34 @@ i = len(names) - 1
 while i >= 0:
     print(names[i])
     i -= 1
+
+# * Tuple Methods
+# ? Thankfully, there's only two! 
+
+# * .count()
+# ? Returns the number of times a value appears in a Tuple
+
+print(first_tuple.count(3)) # prints 3 because there are three... 3's
+
+# * .index()
+# ? Returns the index at which a value is found in a Tuple
+# ? If there are multiple of the item you're looking for, it gives you the first 
+
+print(first_tuple.index(2)) # prints 1
+
+# * Nested Tuples
+# ? Just like lists, you can nest tuples in tuples!
+
+nested_tuple = (1, 2, (3, 4), 5, 6)
+print(nested_tuple[2]) # prints (3, 4)
+print(nested_tuple[2][0]) # prints 3
+
+# ? Tossing in Slice
+
+print(nested_tuple[0: 3]) # prints (1, 2, (3, 4))
+
+# ? Tossing in Slice with a Step
+
+print(nested_tuple[0: 3: 2]) # prints (1, (3, 4))
+
+# ! VERDICT: Faster than lists, but not as flexible!
