@@ -20,3 +20,18 @@ s = {1, 4, 5}  # same as above
 
 4 in s  # True
 8 in s  # False
+
+# ? There is no order, and not totally sure what's governing order in the first place...
+
+# * Looping through Sets
+# ? Also basically works like a list!
+
+for thing in s:
+  print(thing)
+
+# * Removing duplicates from a LIST with a SET
+
+cities = ['Philly', 'New York City', 'Balitmore', 'Chicago', 'Philly']
+print(list(set(cities)))
+# ? The LIST is turned into a SET (removing duplicates)
+# ? and then turned BACK INTO A LIST and printed to the console
