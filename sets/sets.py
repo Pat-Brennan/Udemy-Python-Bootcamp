@@ -12,6 +12,9 @@
 # ? Syntax : x = {insert, elements, here}
 # ? Looks like a dictionary, but you don't use colons to create key-value pairs
 
+import math
+
+
 set_with_duplicates = ({1, 2, 3, 4, 5, 5, 5})  # Sets cannot have duplicates
 
 first_set = ({1, 4, 5})
@@ -27,7 +30,7 @@ s = {1, 4, 5}  # same as above
 # ? Also basically works like a list!
 
 for thing in s:
-  print(thing)
+    print(thing)
 
 # * Removing duplicates from a LIST with a SET
 
@@ -36,7 +39,7 @@ print(list(set(cities)))
 # ? The LIST is turned into a SET (removing duplicates)
 # ? and then turned BACK INTO A LIST and printed to the console
 
-# * Set Methods! 
+# * Set Methods!
 
 # * .add()
 # ? Adds an element to a set.
@@ -45,8 +48,8 @@ print(list(set(cities)))
 s.add(2)
 print(s)
 
-s.add(2) # This will not throw an error
-print(s) # but it WILL NOT add another 2 to the set
+s.add(2)  # This will not throw an error
+print(s)  # but it WILL NOT add another 2 to the set
 
 # * .remove()
 # ? removes a value from the set
@@ -58,7 +61,7 @@ print(s)
 # s.remove(8) results in a KeyError
 # print(s)
 
-# ? .discard() can be used in place of .remove(), but 
+# ? .discard() can be used in place of .remove(), but
 # ? you will not get an informal error message!
 
 # * .copy()
@@ -73,4 +76,21 @@ print(another_s)
 # ? Removes all the contents of the set
 
 s.clear()
-print(s) # prints set()
+print(s)  # prints set()
+
+# * Set Math!
+# ? Some methods are intersection, symmetric_difference, and union!
+
+math_students = {'Eorah', 'Jack', 'Addy', 'Dixie', 'Ruby'}
+bio_students = {'Eorah', 'Jack', 'Bongo', 'Ruby', 'Bird'}
+
+# * Union |
+# ? Combines the sets ignoring duplicates
+# ? uses the ' | '
+
+print(math_students | bio_students)
+
+# * Intersection &
+# ? Specifically points out the duplicates between sets
+
+print(math_students & bio_students)
