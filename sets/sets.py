@@ -35,3 +35,42 @@ cities = ['Philly', 'New York City', 'Balitmore', 'Chicago', 'Philly']
 print(list(set(cities)))
 # ? The LIST is turned into a SET (removing duplicates)
 # ? and then turned BACK INTO A LIST and printed to the console
+
+# * Set Methods! 
+
+# * .add()
+# ? Adds an element to a set.
+# ? If the element is already in the set, the set doesn't change!
+
+s.add(2)
+print(s)
+
+s.add(2) # This will not throw an error
+print(s) # but it WILL NOT add another 2 to the set
+
+# * .remove()
+# ? removes a value from the set
+# ? returns a KeyError if the value is not found
+
+s.remove(5)
+print(s)
+
+# s.remove(8) results in a KeyError
+# print(s)
+
+# ? .discard() can be used in place of .remove(), but 
+# ? you will not get an informal error message!
+
+# * .copy()
+# ? Creates a copy of the set!
+
+another_s = s.copy()
+print(another_s)
+
+# ? while they have the info, they are not stored in the same place in memory
+
+# * .clear()
+# ? Removes all the contents of the set
+
+s.clear()
+print(s) # prints set()
