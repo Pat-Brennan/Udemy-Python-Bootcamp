@@ -27,15 +27,19 @@ print(colors)
 
 # ? We are now using the 'def' keyword!
 
+
 def say_hi():
-  print('Well Howdy!')
+    print('Well Howdy!')
+
 
 say_hi()
 
+
 def happy_birthday():
-  print('Happy birthday to you!')
-  print('Happy birthday to you!')
-  print('Happy birthday dearest yoooouuu!')
-  print('Happy birthday to you!')
-  
-happy_birthday() # The parens are key! The parens are 'calling' the function!
+    print('Happy birthday to you!')
+    print('Happy birthday to you!')
+    print('Happy birthday dearest yoooouuu!')
+    print('Happy birthday to you!')
+
+
+happy_birthday()  # The parens are key! The parens are 'calling' the function!
