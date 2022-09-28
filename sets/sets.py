@@ -94,3 +94,14 @@ print(math_students | bio_students)
 # ? Specifically points out the duplicates between sets
 
 print(math_students & bio_students)
+
+
+# * Set Comprehension
+# ? Works similarly to Dictionary Comprehension
+# ? Syntactically, you do not specify a key:value pair (becuase it's not a dictionary)
+
+# ? Set Comprehension Example
+print({x**2 for x in range(10)})
+
+# ? Same as above, but as a Dictionary Comprehension
+print({x: x**2 for x in range(10)})
