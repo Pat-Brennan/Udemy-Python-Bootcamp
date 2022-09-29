@@ -70,6 +70,24 @@ def is_odd_number(num):
         return True
     return False
 
+
 print(is_odd_number(3))  # True
 print(is_odd_number(2))  # False
 
+# * Documenting Functions
+# ? """""" Triple Double Quotes used at the beginning of function with a message
+# ? to say what it does!
+
+
+def say_hello():
+    """A simple function to say hello"""  # also known as DOC STRINGS
+    return 'Hey you! Stop that!'
+
+
+print(say_hello())
+
+# ? Can be accessed like this!
+# ? Syntax: function.__doc__
+
+print(say_hello.__doc__)
+print(print.__doc__)
