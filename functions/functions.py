@@ -70,6 +70,6 @@ def is_odd_number(num):
         return True
     return False
 
-
 print(is_odd_number(3))  # True
 print(is_odd_number(2))  # False
+
