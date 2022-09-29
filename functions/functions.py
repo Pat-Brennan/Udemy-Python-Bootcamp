@@ -43,3 +43,33 @@ def happy_birthday():
 
 
 happy_birthday()  # The parens are key! The parens are 'calling' the function!
+
+# * Common mistakes when using the return keyword
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# ? Leaving the return INSIDE OF THE FOR LOOP
+
+
+def sum_odd_numbers():
+    total = 0
+    for number in numbers:
+        if number % 2 != 0:
+            total += number
+    # here, the return is OUTDENTED (so it is not inside of the for loop)
+    return total
+
+
+print(sum_odd_numbers())
+
+# ? When returning boolean values, the 'else' is not necessary
+
+
+def is_odd_number(num):
+    if num % 2 != 0:
+        return True
+    return False
+
+
+print(is_odd_number(3))  # True
+print(is_odd_number(2))  # False
