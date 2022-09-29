@@ -53,8 +53,10 @@ print(your_name('ziggy', 'stardust'))  # 'ziggy' and 'stardust' are arguments
 # ? It can be helpful for that parameter to have a DEFAULT value
 # ? Syntax: parameter=default
 
+
 def exponent(num, power=2):
     return num ** power
+
 
 print(exponent(2))
 print(exponent(3))
@@ -66,13 +68,36 @@ print(exponent(3, 6))
 # ? More readable examples
 
 # * What can default params be?
-# ? Anything! 
+# ? Anything!
 # ? Functions, lists, dictionaries, strings, booleans ... Anything!
 
-# ? I'm passing the 'add()' function from earlier, to the math() function 
-def math(a, b, function=add):
-  return function(a, b)
+# ? I'm passing the 'add()' function from earlier, to the math() function
 
-print(math(666, 420)) # 1089
-print(math(666, 420, multiply)) # 279720
-print(math(666, 420, divide)) # 1.58
+
+def math(a, b, function=add):
+    return function(a, b)
+
+
+print(math(666, 420))  # 1089
+print(math(666, 420, multiply))  # 279720
+print(math(666, 420, divide))  # 1.58
+
+# * Keyword Arguments
+# ? As long as you know the param names, order will not matter!
+
+
+def full_name(first, last):
+    return f'{first} {last} is your name! Right?!'
+
+
+# ? Both of these will print the same thing
+print(full_name(first='JARVIS', last='MARVIS'))
+print(full_name(last='JARVIS', first='MARVIS'))
+
+# * Why use Keyword Arguments?
+# ? Particularly useful when passing a dictionary to a function
+# ? and unpacking it's values!
+
+# ! KEYWORD ARGS ARE DIFFERENT FROM DEFAULT PARAMS
+# ? When you define a function and use an = you are setting a default parameter
+# ? When you invoke a function and use an = you are making a keyword arg
