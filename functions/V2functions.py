@@ -46,3 +46,16 @@ def fav_colors (**kwargs):
     print(f"{person}'s favorite color is {color}")
 
 fav_colors(taylor='Blue', jonah='purple', kevin='green')
+
+# * Parameter Ordering
+# ? 1. parameters (params)
+# ? 2. *args
+# ? 3. Default Parameters 
+# ? 4. **kwargs 
+
+# ? When using all four, it is important for them to go in this order!
+
+def display_info (a, b, *args, instructor='Pat', **kwargs):
+  return [a, b, args, instructor, kwargs]
+
+print(display_info(1, 2, 3, last_name='Brennan', job='Instructor'))
