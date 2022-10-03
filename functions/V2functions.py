@@ -59,3 +59,24 @@ def display_info (a, b, *args, instructor='Pat', **kwargs):
   return [a, b, args, instructor, kwargs]
 
 print(display_info(1, 2, 3, last_name='Brennan', job='Instructor'))
+
+# * Using '*' as an Argument:
+# * Argument Unpacking
+# ? We can use * as an argument to a function to 'unpack' values
+
+nums = [1, 2, 3, 4, 5, 6]
+
+# ? The star basically says "Take this list, and run each value through the function"
+# ? This would also work for a Tuple!
+print(v2sum_all_nums(*nums))
+
+# * Using '**' as an Argument:
+# * Dictionary Unpacking
+# ? Works the same as Single *, but unpacks things into keyword arguments 
+
+def display_names(first, second):
+  return f"{first}, say hello to {second}!"
+
+names = {'first':'Bongo', 'second':'Bringo'}
+
+print(display_names(**names))
