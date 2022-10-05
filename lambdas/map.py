@@ -12,9 +12,9 @@
 numbers = [1, 3, 5, 7, 9]
 
 squared = map(lambda num: num * num, numbers)
-print(squared) # ! This will print a MAP OBJECT (Not a list)
+print(squared)  # ! This will print a MAP OBJECT (Not a list)
 
-print(list(squared)) # ! The MAP OBJECT must be CONVERTED!
+print(list(squared))  # ! The MAP OBJECT must be CONVERTED!
 
 people = ['Garfield', 'Chubacca', 'Iron Maiden', 'Chuck E. Cheese']
 
@@ -22,10 +22,10 @@ peeps = map(lambda peep: peep.upper(), people)
 print(list(peeps))
 
 friends = [
-  {'first' : 'Darkness my', 'last' : 'Oldfriend'},
-  {'first' : 'The Hand', 'last' : 'that Feeds'},
-  {'first' : 'The Chained', 'last' : 'One'}
-] 
+    {'first': 'Darkness my', 'last': 'Oldfriend'},
+    {'first': 'The Hand', 'last': 'that Feeds'},
+    {'first': 'The Chained', 'last': 'One'}
+]
 
-first_name = list(map(lambda x: x['first'] , friends))
+first_name = list(map(lambda x: x['first'], friends))
 print(first_name)
