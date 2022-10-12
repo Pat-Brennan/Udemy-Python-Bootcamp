@@ -1,13 +1,13 @@
 
-# * ASCII Art Exercise 
+# * ASCII Art Exercise
 
 from termcolor import colored, cprint
 import pyfiglet
 
-result1 = pyfiglet.figlet_format("Turbo", font = 'banner3-d')
-result2 = pyfiglet.figlet_format("Team", font = 'banner3-d')
-result3 = pyfiglet.figlet_format("!!!!!", font = 'banner3-d')
-slogan = pyfiglet.figlet_format("Y O U WALK!", font = '3-d')
+result1 = pyfiglet.figlet_format("Turbo", font='banner3-d')
+result2 = pyfiglet.figlet_format("Team", font='banner3-d')
+result3 = pyfiglet.figlet_format("!!!!!", font='banner3-d')
+slogan = pyfiglet.figlet_format("Y O U WALK!", font='3-d')
 colored_result1 = colored(result1, 'red')
 colored_result2 = colored(result2, 'white')
 colored_result3 = colored(result3, 'blue')
@@ -29,7 +29,7 @@ msg = input("What woudld you like to print? ")
 color = input("What color? ")
 
 if color not in valid_colors:
-  color = 'magenta'
+    color = 'magenta'
 
 ascii_art = pyfiglet.figlet_format(msg)
 colored_ascii_art = colored(ascii_art, color)

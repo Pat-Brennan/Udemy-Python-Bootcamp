@@ -1,7 +1,7 @@
 
 # * Modules!
 
-# * Why use modules? 
+# * Why use modules?
 # ? Keep Python files small
 # ? reuse code across multiple files by IMPORTING
 # ? A Module is just a Python file!
@@ -13,7 +13,7 @@
 # ? The syntax is the same as before!
 # ? import from THE NAME of the python file
 
-# * External Modules 
+# * External Modules
 # ? External Modules are downloaded from the internet!
 # ? You can downlaod external modules using PIP
 
