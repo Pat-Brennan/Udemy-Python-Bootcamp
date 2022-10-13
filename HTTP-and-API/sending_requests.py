@@ -1,4 +1,3 @@
-from wsgiref import headers
 import requests
 
 # * Requests MODULE!
@@ -22,3 +21,8 @@ data = dad_response_json.json()
 print(dad_response.text)
 print(data)
 print(data['joke'])
+
+# * Query Strings!
+# ? A way to pass data to the serer as part of a GET request
+# ? Example: https://www.website.com/?key1=value1&key2=value2
+# ? The '?' is the beginning of the query, followed by key-value pairs
