@@ -1,5 +1,5 @@
 import requests
-import random
+from random import choice
 import pyfiglet
 from termcolor import colored
 
@@ -14,11 +14,19 @@ search_term = input('What would you like to search? ')
 response = requests.get(
     url,
     headers={'Accept': 'application/json'},
-    params={'term': f'{search_term}', 'limit': 1}
+    params={'term': {search_term}, 'limit': 1}
 )
 
 data = response.json()
 # print(data)
 
-print(f"Got it! I've got a {data['total_jokes']} jokes you might like.")
-print(data['results'][0]['joke'])
+num_jokes = data["total_jokes"]
+results = data["results"]
+if num_jokes > 1:
+    print(f"Got it! I've got {num_jokes} jokes you might like.")
+    print(choice(results)['joke'])
+elif num_jokes == 1:
+    print("Woah! I have exactly 1 joke for that! Congrats!")
+    print(results[0]['joke'])
+else:
+    print(f'There are no Jokes for {search_term}! Come again!')
