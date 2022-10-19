@@ -12,3 +12,7 @@
 # ? Objects that are constructed from a class blueprint that contains their class's ->
 # ? methods and properties.
 
+# * Why OOP?
+# ? With object oriented programming, the goal is to encapsulate your code into ->
+# ? LOGICAL, HIERARCHICAL groupings using classes so that you can reason ->
+# ? about your code at a higher level.
