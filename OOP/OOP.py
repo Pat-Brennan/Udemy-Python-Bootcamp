@@ -58,3 +58,9 @@ class Vehicle:
         self.make = make
         self.model = model
         self.year = year
+
+
+# * What's the deal with underscores anyway?
+# ? _name: Merely Conventional. Meant to IMPLY that an attribute should be PRIVATE
+# ? __name: "Name Mangling": Meant to make an attribute very specific to it's class
+# ? __name__: Dunders define PYTHON SPECIFIC METHODS
