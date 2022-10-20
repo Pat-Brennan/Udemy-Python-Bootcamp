@@ -29,14 +29,32 @@
 # ? conventionally named with singular terms, i.e "User", "Dog", "Person"
 # ? also typically written with camelcase instead of snake case
 
+# * The 'self' keyword
+# ? refers to the current class instance
+# ? Technically, this doesn't need to be called self, but it is standard and ->
+# ? pretty much the only thing you'll see.
 class User:  # this is what every user will look like
-    pass
+
+    def __init__(self, first, last, pet):  # Does not need to be SELF, but it's practical!
+        self.first = first
+        self.last = last
+        self.pet = pet
 
 
-user1 = User()  # This is INSTANTIATING user!
-user2 = User()  # This is INSTANTIATING user!
-user3 = User()  # This is INSTANTIATING user!
-user4 = User()  # This is INSTANTIATING user!
-print(type(user1))
+user1 = User('steve', 'jobs', 'porcupine')  # This is INSTANTIATING user!
+user2 = User('Joey', 'bag o donuts', 'rock')  # This is INSTANTIATING user!
+print(user1.first, user1.pet)
+print(user2.first, user2.pet)
 
-# A change on purpose
+
+# * __init__
+# ? Classes in python can have a special __init__ method, which gets called every time ->
+# ? you create an instance of the class (instantiate).
+
+
+class Vehicle:
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
