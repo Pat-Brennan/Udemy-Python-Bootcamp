@@ -38,3 +38,5 @@ user2 = User()  # This is INSTANTIATING user!
 user3 = User()  # This is INSTANTIATING user!
 user4 = User()  # This is INSTANTIATING user!
 print(type(user1))
+
+# A change on purpose
