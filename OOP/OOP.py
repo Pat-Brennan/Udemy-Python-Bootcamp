@@ -35,16 +35,37 @@
 # ? pretty much the only thing you'll see.
 class User:  # this is what every user will look like
 
-    def __init__(self, first, last, pet):  # Does not need to be SELF, but it's practical!
+    # Does not need to be SELF, but it's practical!
+    def __init__(self, first, last, pet, age):
         self.first = first
         self.last = last
         self.pet = pet
+        self.age = age
+
+    def full_name(self):
+        return f"{self.first} {self.last}"
+
+    def initials(self):
+        return f"{self.first[0].upper()}.{self.last[0].upper()}"
+
+    def likes(self, thing):
+        return f"{self.first} likes {thing}"
+
+    def is_senior(self):
+        return self.age >= 65
+
+    def birthday(self):
+        self.age += 1
+        return f"Happy {self.age}th, {self.first}!"
 
 
 user1 = User('steve', 'jobs', 'porcupine')  # This is INSTANTIATING user!
 user2 = User('Joey', 'bag o donuts', 'rock')  # This is INSTANTIATING user!
-print(user1.first, user1.pet)
+print(user1.full_name())
 print(user2.first, user2.pet)
+print(user2.initials())
+print(user1.initials())
+print(user1.likes("Potatoes"))
 
 
 # * __init__
