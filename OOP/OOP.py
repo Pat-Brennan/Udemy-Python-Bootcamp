@@ -35,12 +35,18 @@
 # ? pretty much the only thing you'll see.
 class User:  # this is what every user will look like
 
+    active_users = 0  # This is a CLASS ATTRIBUTE
+
     # Does not need to be SELF, but it's practical!
-    def __init__(self, first, last, pet, age):
-        self.first = first
+    def __init__(self, first, last, pet):
+        self.first = first  # These are individual INSTANCES!
         self.last = last
         self.pet = pet
-        self.age = age
+        User.active_users += 1  # This refers to the CLASS ATTRIBUTE
+
+    def logout(self):
+        User.active_users -= 1
+        return f'{self.first} has logged out!'
 
     def full_name(self):
         return f"{self.first} {self.last}"
@@ -59,14 +65,18 @@ class User:  # this is what every user will look like
         return f"Happy {self.age}th, {self.first}!"
 
 
+# print(user1.full_name())
+# print(user2.first, user2.pet)
+# print(user2.initials())
+# print(user1.initials())
+# print(user1.likes("Potatoes"))
+
+print(User.active_users)
 user1 = User('steve', 'jobs', 'porcupine')  # This is INSTANTIATING user!
 user2 = User('Joey', 'bag o donuts', 'rock')  # This is INSTANTIATING user!
-print(user1.full_name())
-print(user2.first, user2.pet)
-print(user2.initials())
-print(user1.initials())
-print(user1.likes("Potatoes"))
-
+print(User.active_users)
+print(user2.logout())
+print(User.active_users)
 
 # * __init__
 # ? Classes in python can have a special __init__ method, which gets called every time ->
@@ -85,3 +95,7 @@ class Vehicle:
 # ? _name: Merely Conventional. Meant to IMPLY that an attribute should be PRIVATE
 # ? __name: "Name Mangling": Meant to make an attribute very specific to it's class
 # ? __name__: Dunders define PYTHON SPECIFIC METHODS
+
+# * Class Attributes
+# ? We can also define attributes directly on a class that are shared by all ->
+# ? instances of a class and the class itself.
