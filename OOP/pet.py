@@ -49,6 +49,9 @@ def from_string(cls, data_str):
         self.last = last
         self.pet = pet
         User.active_users += 1  # This refers to the CLASS ATTRIBUTE
+    
+    def __repr__(self): # repr meaning "Representation"
+        return f"{self.first} has a {self.pet}"
 
     def logout(self):
         User.active_users -= 1
