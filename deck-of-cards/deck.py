@@ -1,8 +1,8 @@
 
-#* Building a Deck of Cards with OOP!
+# * Building a Deck of Cards with OOP!
 # Specifications
 
-# Card 
+# Card
 
 # Each instance of Card  should have a suit ("Hearts", "Diamonds", "Clubs", or "Spades").
 
@@ -10,7 +10,7 @@
 
 # Card 's __repr__  method should return the card's value and suit (e.g. "A of Clubs", "J of Diamonds", etc.)
 
-# Deck 
+# Deck
 
 # Each instance of Deck  should have a cards attribute with all 52 possible instances of Card .
 
@@ -26,19 +26,64 @@
 
 # Deck  should have an instance method called deal_hand  which accepts a number and uses the _deal  method to deal a list of cards from the deck and return that list of cards.
 
+from random import shuffle
+
+
 class Card:
-  
-  def __init__(suit, value):
-    pass
-  
+
+    def __init__(self, value, suit):
+        self.value = value
+        self.suit = suit
+
+    def __repr__(self):  # repr being representation
+        # return "{} of {}".format(self.value, self.suit)
+        return f"{self.value} of {self.suit}"
+
 
 class Deck:
-  
-  def __init__():
-    pass
-  
-  def _deal():
-    pass
-  
-  def shuffle():
-    pass
+
+    def __init__(self):
+        suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+        values = ["Ace", "2", "3", "4", "5", "6", "7",
+                  "8", "9", "10", "Jack", "Queen", "King"]
+        self.cards = [Card(value, suit) for value in values for suit in suits]
+
+    def __repr__(self):
+        return f"Deck of {self.count()} Cards"
+
+        # ? The above written in a nested for-loop
+        # for suit in suits:
+        #     for value in values:
+        #         print(Card(value, suit))
+
+    def count(self):
+        return len(self.cards)
+
+    def _deal(self, num):
+        count = self.count()
+        actual = min([count, num])
+        if count == 0:
+            raise ValueError("All cards have been dealt")
+        cards = self.cards[-actual:]
+        self.cards = self.cards[:-actual]
+        return cards
+
+    def deal_card(self):
+        return self.deal(1)[0]
+
+    def deal_hand(self, hand_size):
+        return self.deal(hand_size)
+
+    def shuffle(self):
+        if self.count() < 52:
+            return ValueError("Only full decks can be shuffled")
+        else:
+            shuffle(self.cards)
+
+
+d = Deck()
+d.shuffle()
+card = d.deal_card
+print(card)
+hand = d.deal_hand(5)
+print(hand)
