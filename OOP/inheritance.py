@@ -8,14 +8,20 @@
 
 class Animal:
 
-    def make_sound(self, sound):
-        print(sound)
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
 
-    cool = True
+    def make_sound(self, sound):
+        print(f"This animal says {sound}")
 
 
 class Cat(Animal):
-    pass
+    def __init__(self, name, species, breed, toy):
+        self.name = name  # ? Eorah 😈
+        self.species = species  # ? Cat 😸
+        self.breed = breed  # ? Hellspawn 🔥
+        self.toy = toy  # ? Human Feet 🦶
 
 
 eorah = Cat()
