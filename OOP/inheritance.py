@@ -12,16 +12,25 @@ class Animal:
         self.name = name
         self.species = species
 
+    def __repr__(self):
+        return f"{self.name} is a {self.species}"
+
     def make_sound(self, sound):
         print(f"This animal says {sound}")
 
 
+# * Using super()
+
 class Cat(Animal):
-    def __init__(self, name, species, breed, toy):
-        self.name = name  # ? Eorah 😈
-        self.species = species  # ? Cat 😸
-        self.breed = breed  # ? Hellspawn 🔥
-        self.toy = toy  # ? Human Feet 🦶
+    def __init__(self, name, breed, toy):
+        # super() reduces the duplication of "self.whatever" etc
+        super().__init__(name, species="Cat")
+        # In this case self.name and species since they are already in class Animal
+        self.breed = breed
+        self.toy = toy
+
+    def play(self):
+        print(f"{self.name} plays with {self.toy}")
 
 
 eorah = Cat()
