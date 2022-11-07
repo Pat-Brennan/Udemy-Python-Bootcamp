@@ -78,6 +78,27 @@ print(User.active_users)
 print(user2.logout())
 print(User.active_users)
 
+
+class Cult_Leader(User):
+    total_leaders = 0
+
+    def __init__(self, first, last, age, cult, rank):
+        super().__init__(first, last, age)
+        self.cult = cult
+        self.rank = rank
+        Cult_Leader.total_leaders += 1
+
+    def remove_follower(self):
+        return f"{self.full_name()} removed a follower from {self.cult} flock."
+
+
+rocco = Cult_Leader("Rocco", "The Pizza Man", "666-420-pizza",
+                    "The Pizza People", "Pepperoni Person")
+print(f"{rocco.first} {rocco.last}")
+print(f"Leader of the {rocco.cult}")
+print(f"Current Rank: {rocco.rank}")
+
+
 # * __init__
 # ? Classes in python can have a special __init__ method, which gets called every time ->
 # ? you create an instance of the class (instantiate).
