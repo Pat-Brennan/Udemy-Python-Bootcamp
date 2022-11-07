@@ -38,4 +38,3 @@ print(eorah.make_sound("Meowmeoeoemeow"))
 
 # isinstance = Boolean method. Should return True.
 print(isinstance(eorah, Cat))
-
