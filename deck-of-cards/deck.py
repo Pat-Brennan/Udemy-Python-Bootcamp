@@ -51,6 +51,9 @@ class Deck:
     def __repr__(self):
         return f"Deck of {self.count()} Cards"
 
+    def __iter__(self):
+        return iter(self.cards)
+
         # ? The above written in a nested for-loop
         # for suit in suits:
         #     for value in values:
